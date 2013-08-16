@@ -1,0 +1,34 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@title</title>
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        
+    </head>
+    <body>
+    	<div class="navbar navbar-fixed-top">  
+ 			 <div class="navbar-inner">  
+   				 <div class="container">  
+   					<a class="brand" href="@routes.Application.index()">Home</a>
+   					<ul class="nav">  
+ 						 <li>  
+   							 <a href="@routes.Application.index()"></a>  
+ 						 </li>
+ 				   </ul> 
+   				 </div>  
+ 			 </div>  
+		</div> 
+        <div class="container">
+        		<br/>
+        		<br/>
+        		<br/>
+        		@content
+        </div>
+       	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="@routes.Application.myJsRoutes()" type="text/javascript"></script>
+    </body>   		 
+</html>
