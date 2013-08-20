@@ -6,16 +6,17 @@
     <head>
         <title>@title</title>
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
-        
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootplus.min.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootplus-responsive.min.css")">
     </head>
     <body>
     	<div class="navbar navbar-fixed-top">  
  			 <div class="navbar-inner">  
    				 <div class="container">  
-   					<a class="brand" href="@routes.Application.index()">Home</a>
+   					<a class="brand" href="@routes.Application.index()">Play AJAX</a>
    					<ul class="nav">  
- 						 <li>  
-   							 <a href="@routes.Application.index()"></a>  
+ 						 <li class="active">
+   							 <a href="@routes.Application.index()">Home</a>  
  						 </li>
  				   </ul> 
    				 </div>  
@@ -26,9 +27,9 @@
         		<br/>
         		<br/>
         		@content
-        </div>
-       	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        </div>       	
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="@routes.Application.myJsRoutes()" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/bootstrap.min.js")" type="text/javascript"></script>
     </body>   		 
 </html>

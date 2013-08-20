@@ -4,13 +4,21 @@
 @import helper.twitterBootstrap._
 
 
-@main("Welcome to Play 2.1") {
+@main("Play JsRoutes") {
     
-    <legend> hello,world! </legend>
+    <section id="contents">
+    <legend> Play Ajax Samples </legend>
       <fieldset>
-      		<input type="text" id="username" name="username" placeholder="Enter your name">		
+      		<input type="text" id="username" name="username" placeholder="Enter your name">
+      		<select name="method" id="selectMethod" class="selectpicker">
+                        <option value="1">Js Routes</option>
+                        <option value="2">Ajax GET</option>
+                        <option value="3">Ajax POST</option>
+                        <option value="4">Ajax JSON</option>
+                        <option value="5">Plain Ajax</option>
+           </select>	
             <div class="actions">
-      		     <input type="button" class="btn" value="Say Hello!" onClick="sayHello()">
+      		     <input type="button" class="btn" value="Say Hello!" onClick="selectHelloMethod()">
             </div>
       </fieldset>      
       
@@ -18,7 +26,9 @@
       <br/>
       <br/>
     
-      <div id="sayHello"></div>
-      <script src="@routes.Assets.at("javascripts/sayhello.js")" type="text/javascript"></script>	
+      <div class="lead" id="sayHello"></div>
+      </section>
+      <script src="@routes.Assets.at("javascripts/sayhello.js")" type="text/javascript"></script>
       
+      	
 }
